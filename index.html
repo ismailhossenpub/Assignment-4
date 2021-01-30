@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+        <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container sticky-top">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    
+    <main id="main-part" class="main-content container">
+        <div  class="booking-form">
+                <h3>Booking Flights</h3>
+            <div class="input-group">
+                <label for="">Flying From</label>
+                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+            </div>
+            <div class="input-group">
+                <label for="">Flying To</label>
+                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label" for="">Departure</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Return</label>
+                    <input class="inp-style" style="margin-top: 1px;" type="date" name="">
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <label for="">First Class ($150)</label>
+                    <div class="input-group ticketBtn">
+                        <input id="firstClassTicket-count" type="text" class="inp-style text-center inp-width" value="0">
+                       <button  onclick="handleFlightTicket('firstClassTicket', true)" class="btn btn-default" style="margin: 15px 2px 10px 20px; background-color: aqua; ">
+                         <i class="fas fa-plus"></i>
+                       </button>
+                       <button onclick="handleFlightTicket('firstClassTicket', false)" class="btn btn-default " style="margin: 15px 5px 10px 2px; background-color:chartreuse;">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                     </div>
+                </div>
+            <div class="input-group f-class">
+                    <label for="">Economy ($100)</label>
+                    <div class="input-group ticketBtn">
+                        <input id="economy-count" type="text" class="inp-style text-center inp-width" value="0">
+                       <button onclick="handleFlightTicket('economy', true)" class="btn btn-default" style="margin: 15px 2px 10px 20px; background-color: aqua; ">
+                         <i class="fas fa-plus"></i>
+                       </button>
+                       <button onclick="handleFlightTicket('economy', false)" class="btn btn-default " style="margin: 15px 5px 10px 2px; background-color:chartreuse;">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                     </div>
+                </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p id="total-price">$0</p>
+                    </div>
+                </div>
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                        <p id="vat-amount">$0</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                        <p id="grand-total">$0</p>
+                    </div>
+                </div>
+            </div>
+            <button id="bookingNowPart" class="btn-style">Booking Now</button>
+        </div>
+        <div class="booking-content">
+            <h1>discover <br> around the world</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+        </div>
+        </main>
+        //Click "Booking Now" button and show the success message
+        <div id="success-message" class="container">
+                <div class="submit-data">
+                  <h4 style="color: green;">Your booking has been successful! </h4>
+                  <p>You booking <span id="firstClass">0</span> first class seat and <span id="economyClass">0</span> economy seat. So, your total cost is <span id="totalCost">$0 </span> .</p>
+                </div>
+        </div>
+    <script src="script.js">
+    </script>
+</body>
+</html>
